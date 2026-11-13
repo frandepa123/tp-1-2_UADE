@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Qué Hacemos - Mesa Abierta</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+  <header class="navbar">
+    <div class="nav-contenedor">
+      <a href="../index.html" class="logo"><span>🍞</span> Mesa Abierta</a>
+
+      <button class="kebab" aria-label="Abrir menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <ul class="nav-links">
+        <li><a href="../index.html">Inicio</a></li>
+        <li><a href="sobre-nosotros.html">Sobre Nosotros</a></li>
+        <li><a href="que-hacemos.html" class="activo">Qué Hacemos</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+        <li><a href="donar.html" class="btn-donar">Donar</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <section class="hero" style="padding:70px 20px">
+    <h1>Qué Hacemos</h1>
+    <p>Rescatamos, clasificamos y distribuimos alimentos todos los días del año.</p>
+  </section>
+
+  <section>
+    <div class="contenedor">
+      <div class="titulo-seccion">
+        <h2>Nuestro trabajo en imágenes</h2>
+        <p>Un recorrido por las etapas del proceso, desde el rescate hasta la entrega.</p>
+      </div>
+
+      <div class="carrousel">
+        <div class="carrousel-pista" id="pista">
+
+          <div class="slide">
+            <img src="../img/deposito.avif" alt="Depósito con alimentos ordenados">
+            <div class="caption">
+              <h3>1. Recepción en el depósito</h3>
+              <p>Los alimentos rescatados llegan a nuestro centro de operaciones.</p>
+            </div>
+          </div>
+
+          <div class="slide">
+            <img src="../img/clasificacion-comida.webp" alt="Voluntarios clasificando alimentos">
+            <div class="caption">
+              <h3>2. Clasificación</h3>
+              <p>Los voluntarios revisan y separan los alimentos por tipo.</p>
+            </div>
+          </div>
+
+          <div class="slide">
+            <img src="../img/canasta.avif" alt="Canasta con frutas y verduras frescas">
+            <div class="caption">
+              <h3>3. Armado de bolsones</h3>
+              <p>Preparamos canastas equilibradas con frutas, verduras y secos.</p>
+            </div>
+          </div>
+
+          <div class="slide">
+            <img src="../img/familia-comida.webp" alt="Familia recibiendo alimentos">
+            <div class="caption">
+              <h3>4. Entrega</h3>
+              <p>Los bolsones llegan a comedores y familias de distintos barrios.</p>
+            </div>
+          </div>
+
+        </div>
+
+        <button class="carrousel-btn prev" id="btnPrev">‹</button>
+        <button class="carrousel-btn next" id="btnNext">›</button>
+      </div>
+
+      <div class="carrousel-puntos" id="puntos"></div>
+    </div>
+  </section>
+
+  <section style="background-color:#fff;border-top:1px solid var(--borde)">
+    <div class="contenedor">
+      <div class="titulo-seccion">
+        <h2>Nuestros programas</h2>
+      </div>
+
+      <div class="fila">
+        <div class="mitad">
+          <img src="../img/deposito.avif" alt="Depósito de alimentos">
+        </div>
+        <div class="mitad">
+          <h3>Rescate de alimentos</h3>
+          <p>Trabajamos con 45 supermercados, verdulerías y empresas que nos
+            donan productos aptos para el consumo que no van a vender. Así
+            evitamos que terminen en la basura.</p>
+        </div>
+      </div>
+
+      <div class="fila invertida">
+        <div class="mitad">
+          <img src="../img/comedor-niños.jpg" alt="Comedor comunitario">
+        </div>
+        <div class="mitad">
+          <h3>Red de comedores</h3>
+          <p>Asistimos a 120 comedores y merenderos con entregas semanales de
+            alimentos, para que puedan garantizar un plato de comida caliente.</p>
+        </div>
+      </div>
+
+      <div class="fila">
+        <div class="mitad">
+          <img src="../img/clasificacion-comida.webp" alt="Voluntarios trabajando">
+        </div>
+        <div class="mitad">
+          <h3>Voluntariado</h3>
+          <p>Más de 300 voluntarios participan en la clasificación, el armado de
+            bolsones y el reparto. Siempre hay lugar para una mano más.</p>
+          <a href="contacto.html" class="btn btn-primario">Quiero ser voluntario</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-grid">
+      <div class="footer-col">
+        <h4>🍞 Mesa Abierta</h4>
+        <p>Banco de alimentos sin fines de lucro. Rescatamos comida y la
+          llevamos a quien más la necesita.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Secciones</h4>
+        <a href="../index.html">Inicio</a>
+        <a href="sobre-nosotros.html">Sobre Nosotros</a>
+        <a href="que-hacemos.html">Qué Hacemos</a>
+        <a href="contacto.html">Contacto</a>
+        <a href="donar.html">Donar</a>
+      </div>
+      <div class="footer-col">
+        <h4>Seguinos</h4>
+        <a href="linktree.html">Todos nuestros links</a>
+        <a href="#">Instagram</a>
+        <a href="#">Facebook</a>
+        <a href="#">YouTube</a>
+      </div>
+    </div>
+    <div class="footer-abajo">
+      <p>&copy; 2026 Mesa Abierta - Trabajo Práctico 2 · Francesco Depaolini</p>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+  <script src="../js/que-hacemos.js"></script>
+</body>
+</html>

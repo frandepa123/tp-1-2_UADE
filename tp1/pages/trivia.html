@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trivia - Mi Pagina de Rock</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+  <header>
+    <h1>Trivia de Rock Nacional</h1>
+    <p>A ver que tanto sabes del rock nacional</p>
+  </header>
+
+  <nav>
+    <a href="../index.html">Inicio</a>
+    <a href="about.html">Sobre mi</a>
+    <a href="trivia.html">Trivia</a>
+    <a href="tierlist.html">Tier List</a>
+    <a href="playlist.html">Playlist</a>
+  </nav>
+
+  <main>
+    <section>
+      <h2>Preguntas</h2>
+      <p>Cinco preguntas, una sola oportunidad por cada una. Tocá la opción que creas correcta y fijate cómo te va.</p>
+
+      <div class="pregunta">
+        <p>1. ¿Qué banda grabó el disco "Artaud"?</p>
+        <div class="opciones">
+          <button onclick="responder(this, true)">Pescado Rabioso</button>
+          <button onclick="responder(this, false)">Sui Generis</button>
+          <button onclick="responder(this, false)">Almendra</button>
+        </div>
+        <p class="resultado"></p>
+      </div>
+
+      <div class="pregunta">
+        <p>2. ¿Quién es el cantante de Patricio Rey y sus Redonditos de Ricota?</p>
+        <div class="opciones">
+          <button onclick="responder(this, false)">Charly García</button>
+          <button onclick="responder(this, true)">Indio Solari</button>
+          <button onclick="responder(this, false)">Luca Prodan</button>
+        </div>
+        <p class="resultado"></p>
+      </div>
+
+      <div class="pregunta">
+        <p>3. ¿De qué banda era Luca Prodan?</p>
+        <div class="opciones">
+          <button onclick="responder(this, false)">Los Piojos</button>
+          <button onclick="responder(this, false)">Divididos</button>
+          <button onclick="responder(this, true)">Sumo</button>
+        </div>
+        <p class="resultado"></p>
+      </div>
+
+      <div class="pregunta">
+        <p>4. "Seminare" es una canción de...</p>
+        <div class="opciones">
+          <button onclick="responder(this, true)">Serú Girán</button>
+          <button onclick="responder(this, false)">Soda Stereo</button>
+          <button onclick="responder(this, false)">Virus</button>
+        </div>
+        <p class="resultado"></p>
+      </div>
+
+      <div class="pregunta">
+        <p>5. ¿Qué banda lideraba Gustavo Cerati?</p>
+        <div class="opciones">
+          <button onclick="responder(this, false)">Los Fabulosos Cadillacs</button>
+          <button onclick="responder(this, true)">Soda Stereo</button>
+          <button onclick="responder(this, false)">Los Abuelos de la Nada</button>
+        </div>
+        <p class="resultado"></p>
+      </div>
+
+      <p id="puntaje">Puntaje: 0 / 5</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 - Francesco Depaolini</p>
+  </footer>
+
+  <script>
+    var aciertos = 0;
+    var totalPreguntas = 5;
+
+    function responder(boton, esCorrecta) {
+      var pregunta = boton.closest('.pregunta');
+
+      if (pregunta.getAttribute('data-respondida') === 'si') {
+        return;
+      }
+      pregunta.setAttribute('data-respondida', 'si');
+
+      var resultado = pregunta.querySelector('.resultado');
+
+      if (esCorrecta) {
+        aciertos++;
+        resultado.textContent = '¡Correcto!';
+        resultado.className = 'resultado correcto';
+      } else {
+        resultado.textContent = 'Incorrecto.';
+        resultado.className = 'resultado incorrecto';
+      }
+
+      var botones = pregunta.querySelectorAll('button');
+      for (var i = 0; i < botones.length; i++) {
+        botones[i].disabled = true;
+      }
+
+      document.getElementById('puntaje').textContent =
+        'Puntaje: ' + aciertos + ' / ' + totalPreguntas;
+    }
+  </script>
+
+</body>
+</html>
